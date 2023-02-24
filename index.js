@@ -40,6 +40,11 @@ const arr =[
     const screenFirst = document.querySelector('.space-item')
     const screenSecond = document.querySelector('.space-item2')
     const translite = document.querySelector('.translite')
+   
+    const night = document.querySelector('.eng')
+   const text = document.querySelector('.text')
+   const sectionNight = document.querySelector('.main')
+
     englishWord.textContent = arr[0]
 
 console.log(arr[0])
@@ -79,5 +84,15 @@ console.log(arr[0])
                 screenSecond.classList.remove('space-start')
               } )
 
-     
-  
+
+              night.addEventListener(
+                "click",
+           
+                () => { 
+                  btnStart.classList.toggle('btn-night')
+         btnStop.classList.toggle('btn-night')
+         screenFirst.classList.toggle('div-night')
+         text.classList.toggle('text-night')
+         sectionNight.classList.toggle('section-night')
+                  
+         })
