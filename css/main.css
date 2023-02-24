@@ -5,11 +5,17 @@
   width: 100%;
   height: 700px;
   align-items: center;
+  padding: 10px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
 }
 
 .space-item {
-  margin-top: 38px;
   width: 330px;
+  margin-top: 38px;
   height: 350px;
   justify-content: center;
   display: flex;
