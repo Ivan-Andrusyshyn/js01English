@@ -32,6 +32,8 @@ const arr =[
 'як', 'ми', 'багато', 'номер', 'отримати', 'з', 'коли', 'потім', 'ні', 
 'прийти', 'його', 'твої', 'їх', 'шлях', 'зроблемно', 'вони', 'могти', 'ці', 
 'міг би', 'можливо', 'Я', 'сказав', 'так', 'люди', 'частина']
+
+
   const englishWord = document.querySelector('.english-word')
   const btnStart = document.querySelector('.btn-start')
   const btnStop = document.querySelector('.btn-stop')
@@ -39,6 +41,7 @@ const arr =[
     const screenSecond = document.querySelector('.space-item2')
     const translite = document.querySelector('.translite')
     englishWord.textContent = arr[0]
+
 console.log(arr[0])
   let count = -1;
 
