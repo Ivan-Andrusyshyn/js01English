@@ -44,8 +44,7 @@ const arr =[
     const night = document.querySelector('.eng')
    const text = document.querySelector('.text')
    const sectionNight = document.querySelector('.main')
-
-    englishWord.textContent = arr[0]
+    
 
 console.log(arr[0])
   let count = -1;
