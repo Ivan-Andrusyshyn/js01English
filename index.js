@@ -16,7 +16,7 @@ const arr =[
   'come', 'his', 'your', 'them', 'way', 'made', 'they', 'can', 'these', 
   'could', 'may', 'I', 'said', 'so', 'people', 'part']
 
-  const arr2 =['час ', 'інформація', 'люди', 'річ ', 'громада', 
+  const arr2 =['час', 'інформація', 'люди', 'річ ', 'громада', 
   'чоловік ', 'жінка ', 'шлях ',
 'життя', 'дитина ','світ','школа', 'держава ', "сім'я",
 'студент','група ','країна ','проблема ',
@@ -39,7 +39,7 @@ const arr =[
     const screenSecond = document.querySelector('.space-item2')
     const translite = document.querySelector('.translite')
     englishWord.textContent = arr[0]
-
+console.log(arr[0])
   let count = -1;
 
   btnStop.addEventListener(
@@ -50,8 +50,8 @@ const arr =[
                             englishWord.textContent = arr[count]
                             screenSecond.classList.remove('space-start')
 
-                            if(count==100){
-                               count=0
+                            if(count==arr.length){
+                               count=-1
                             }
 
                  })
@@ -61,9 +61,9 @@ const arr =[
                     () => { 
                         count--
                         screenSecond.classList.remove('space-start')
-                        englishWord.textContent = arr[count]
-                        if(count<0){
-                            count=100
+                       englishWord.textContent = arr[count]
+                        if(count<=-1){
+                            count=arr.length
                          }
 
              })
