@@ -32,8 +32,8 @@ const arr = [
 ]
 
   const englishWord = document.querySelector('.english-word')
-  const btnStart = document.querySelector('.div-start')
-  const btnStop = document.querySelector('.div-stop')
+  const btnStart = document.querySelector('.btn-start')
+  const btnStop = document.querySelector('.btn-stop')
     const screenFirst = document.querySelector('.space-item')
     const screenSecond = document.querySelector('.space-item2')
     const translite = document.querySelector('.translite')
