@@ -72,7 +72,16 @@
   }
   /* =============btn======================= */
   
-  
+  .div-start{
+    height: 100px;
+  }
+  .div-stop{
+    height: 100px;
+  }
+  .block {
+    display: flex;
+    gap: 30px;
+}
   .btn-stop{
       width: 130px;
       height: 40px;
@@ -173,10 +182,7 @@
   
   
   /* ================================== */
-  .block {
-      display: flex;
-      gap: 40px;
-  }
+
 
   .btn-night {
     background-color: #39218b;

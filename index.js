@@ -32,8 +32,8 @@ const arr = [
 ]
 
   const englishWord = document.querySelector('.english-word')
-  const btnStart = document.querySelector('.btn-start')
-  const btnStop = document.querySelector('.btn-stop')
+  const btnStart = document.querySelector('.div-start')
+  const btnStop = document.querySelector('.div-stop')
     const screenFirst = document.querySelector('.space-item')
     const screenSecond = document.querySelector('.space-item2')
     const translite = document.querySelector('.translite')
@@ -77,7 +77,7 @@ const arr = [
                         screenSecond.classList.remove('space-start')
                        englishWord.textContent = word[count]
 
-                        if(count<=0){
+                        if(count<0){
                             count=arr.length
                          }
 
