@@ -49,63 +49,49 @@ const arr = [
  const  tran = [];
    for (let w of arr) {
      word.push(w.word);
-   }
-   for (let w of arr) {
     tran.push(w.translite);
-  }
-  
+
+   }
+ 
   let count = -1;
+console.log(word)
+  
 
-  btnStop.addEventListener(
-                        "click",
-                   
-                        () => { 
-                            count++
-                            screenSecond.classList.remove('space-start')
-                            englishWord.textContent = word[count]
-
-                            if(count==arr.length){
-                               count=-1
-                            }
-
-                 })
-                 btnStart.addEventListener(
-                    "click",
-               
-                    () => { 
-                        count--
-                        screenSecond.classList.remove('space-start')
-                       englishWord.textContent = word[count]
-
-                        if(count<0){
-                            count=arr.length
-                         }
-
-             })
-              
-
-             screenFirst.addEventListener("click",()=>{
-              translite.textContent = tran[count]
-                    if(count>=0){
-                      screenSecond.classList.add('space-start')
-
-                    }
-             } )
-             
-             
-             
-             screenSecond.addEventListener("click",()=>{
-                screenSecond.classList.remove('space-start')
-              } )
-
-
-              night.addEventListener(
-                "click",   
-                () => { 
-                  btnStart.classList.toggle('btn-night')
-         btnStop.classList.toggle('btn-night')
-         screenFirst.classList.toggle('div-night')
-         text.classList.toggle('text-night')
-         sectionNight.classList.toggle('section-night')
-                  
-         })
+  btnStop.addEventListener( "click", btnRight)
+ btnStart.addEventListener("click", btnLeft)
+ screenFirst.addEventListener("click", screenOne ) 
+ screenSecond.addEventListener("click", screenFirstremove)
+ night.addEventListener("click",  nightTone)
+                    
+function btnRight() { 
+  count++
+   screenSecond.classList.remove('space-start')
+  englishWord.textContent = word[count]
+ if(count==arr.length){
+ count=-1
+  }
+    }     
+function btnLeft() { 
+  count--
+  screenSecond.classList.remove('space-start')
+ englishWord.textContent = word[count]
+  if(count<0){
+      count=arr.length
+   }                        
+ }            
+function screenOne(){
+translite.textContent = tran[count]
+ if(count>=0){
+ screenSecond.classList.add('space-start')
+ }  
+}
+function screenFirstremove(){
+   screenSecond.classList.remove('space-start')
+}
+function nightTone(){ 
+ btnStart.classList.toggle('btn-night')
+ btnStop.classList.toggle('btn-night')
+ screenFirst.classList.toggle('div-night')
+text.classList.toggle('text-night')
+sectionNight.classList.toggle('section-night')
+ }
