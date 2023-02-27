@@ -30,18 +30,16 @@ const arr = [
 {word:'five', translite:'5'},{word:'six', translite:'6'},{word:'made', translite:'зроблено'},
 {word:'sun', translite:'сонце'},{word:'moon', translite:'місяць'},{word:'night', translite:'ніч'}
 ]
-
   const englishWord = document.querySelector('.english-word')
   const btnStart = document.querySelector('.btn-start')
   const btnStop = document.querySelector('.btn-stop')
-    const screenFirst = document.querySelector('.space-item')
-    const screenSecond = document.querySelector('.space-item2')
-    const translite = document.querySelector('.translite')
+  const screenFirst = document.querySelector('.space-item')
+  const screenSecond = document.querySelector('.space-item2')
+  const translite = document.querySelector('.translite')
    
-    const night = document.querySelector('.eng')
-   const text = document.querySelector('.text')
-   const sectionNight = document.querySelector('.main')
-   englishWord.textContent = 'Start';
+  const night = document.querySelector('.eng')
+  const text = document.querySelector('.text')
+  const sectionNight = document.querySelector('.main')
     
 
 
@@ -52,7 +50,7 @@ const arr = [
     tran.push(w.translite);
 
    }
- 
+   
   let count = -1;
 console.log(word)
   
@@ -64,15 +62,16 @@ console.log(word)
  night.addEventListener("click",  nightTone)
                     
 function btnRight() { 
-  count++
+  console.log(count+=1)
    screenSecond.classList.remove('space-start')
   englishWord.textContent = word[count]
- if(count==arr.length){
+ if(count>=arr.length-1){
  count=-1
   }
+  return
     }     
 function btnLeft() { 
-  count--
+  console.log(count-=1)
   screenSecond.classList.remove('space-start')
  englishWord.textContent = word[count]
   if(count<0){
@@ -81,7 +80,7 @@ function btnLeft() {
  }            
 function screenOne(){
 translite.textContent = tran[count]
- if(count>=0){
+ if(count>-1){
  screenSecond.classList.add('space-start')
  }  
 }
