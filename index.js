@@ -76,7 +76,7 @@ return elValue
 function getEnter(){
   main.classList.add('enter')
   inputDiv.classList.add('displayNone') 
-  sectionNight.classList.add('section-white')
+  sectionNight.style.backgroundColor = '#ffffff'
 }
 
 function btnRight() { 
@@ -105,11 +105,11 @@ function screenFirstremove(){
    screenSecond.classList.remove('space-start')
 }
 function nightTone(){ 
-  sectionNight.classList.toggle('section-white')
+ 
  btnStart.classList.toggle('btn-night')
  btnStop.classList.toggle('btn-night')
  screenFirst.classList.toggle('div-night')
 text.classList.toggle('text-night')
-sectionNight.classList.toggle('section-night')
+sectionNight.style.backgroundColor = '#2e2f42'
 textGreeting.classList.toggle('text-greeting-dark')   
  }
