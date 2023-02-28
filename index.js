@@ -36,7 +36,13 @@ const arr = [
   const screenFirst = document.querySelector('.space-item')
   const screenSecond = document.querySelector('.space-item2')
   const translite = document.querySelector('.translite')
-   
+  const main = document.querySelector('.main')
+
+  const input = document.querySelector('input[type="name"]')
+  const inputBtn = document.querySelector('.input_btn')
+  const inputDiv = document.querySelector('.input_div')
+  const textGreeting = document.querySelector('.text_greeting')
+
   const night = document.querySelector('.eng')
   const text = document.querySelector('.text')
   const sectionNight = document.querySelector('body')
@@ -52,15 +58,27 @@ const arr = [
    }
    
   let count = -1;
-console.log(word)
-  
 
+  input.addEventListener("input", getInput)
+  inputBtn.addEventListener("click",getEnter)
   btnStop.addEventListener( "click", btnRight)
  btnStart.addEventListener("click", btnLeft)
  screenFirst.addEventListener("click", screenOne ) 
  screenSecond.addEventListener("click", screenFirstremove)
  night.addEventListener("click",  nightTone)
-                    
+  
+ function getInput(event){
+ let elValue = event.currentTarget.value;
+ textGreeting.textContent = `Welcome, ${elValue}`;
+return elValue
+ }
+
+function getEnter(){
+  main.classList.add('enter')
+  inputDiv.classList.add('displayNone') 
+  sectionNight.classList.add('section-white')
+}
+
 function btnRight() { 
   console.log(count+=1)
    screenSecond.classList.remove('space-start')
@@ -87,9 +105,11 @@ function screenFirstremove(){
    screenSecond.classList.remove('space-start')
 }
 function nightTone(){ 
+  sectionNight.classList.toggle('section-white')
  btnStart.classList.toggle('btn-night')
  btnStop.classList.toggle('btn-night')
  screenFirst.classList.toggle('div-night')
 text.classList.toggle('text-night')
 sectionNight.classList.toggle('section-night')
+textGreeting.classList.toggle('text-greeting-dark')   
  }

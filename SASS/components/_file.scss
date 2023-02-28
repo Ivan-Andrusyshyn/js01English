@@ -1,11 +1,106 @@
+body{
+  background-color:#2E2F42;
+}
 .main{
-  display: flex;
+  display: none;
   flex-direction: column;
     margin: 0 auto;
     width:100%;
     height: 700px;
     align-items: center;
     padding: 10px;
+  }
+  .input_div{
+    margin: 0 auto;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+    padding: 0 15px;
+    width: 100%;
+    height: auto;
+    margin-top: 200px;
+
+    @media screen and (min-width:480px) {
+         width:480px;
+  }
+  
+  @media screen and (min-width:1200px) {
+        width:100%;
+  }
+}
+.input_text{
+  margin-top: 0;
+  width:300px;
+  font-family: 'Raleway', sans-serif;
+font-size: 24px;
+line-height: calc(32/24);
+color: #E7E9FC;
+@media screen and (min-width:480px) {
+  width:300px;
+}
+}
+.input_btn{
+  font-family: 'Raleway', sans-serif;
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 20px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ background-color: #39218b;
+}
+  .input_name {
+    cursor: pointer;
+    transition: border-color 250ms linear;
+    padding-left: 16px;
+    color: rgba(255, 255, 255, 0.3);
+    outline: none;
+    width: 100%;
+    height: 50px;
+    display: block;
+    background-color: transparent;
+    box-shadow: rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    border: 2px solid  rgba(255, 255, 255, 0.3);
+    margin-bottom: 20px;
+ 
+
+    &::placeholder {
+        font-size: 16px;
+        font-style: 400;
+        line-height: calc(20 / 16);
+    }
+
+    &:focus::-webkit-input-placeholder {
+        color: transparent;
+    }
+
+    &:focus,
+    &:hover {
+        border-color:#4D5AE5;
+    }
+    @media screen and (min-width:480px) {
+      max-width: 450px;
+  }
+  
+  @media screen and (min-width:1200px) {
+        width: 398px;
+
+  }
   }
   .container{
      display: flex;
@@ -20,6 +115,7 @@
       align-items: center;
       font-size: 50px;
       font-weight: 700;
+      margin-top: 24px;
       margin-bottom: 30px;
       background-color: green;
       border-radius: 10px;
@@ -31,9 +127,9 @@
   .space-item2{
     width: 330px;
     height: 350px;
-  top: 46px;
-  position: absolute;
-  justify-content: center;
+    top: 90px;
+    position: absolute;
+    justify-content: center;
       display: flex;
       align-items: center;
       font-size: 50px;
@@ -73,10 +169,7 @@
   /* =============btn======================= */
   
 
-  .block {
-    display: flex;
-    gap: 30px;
-}
+ 
   .btn-stop{
       width: 130px;
       height: 40px;
@@ -177,8 +270,31 @@
   
   
   /* ================================== */
+.text_greeting{
+  width:100%;
+  font-family: 'Raleway', sans-serif;
+font-size: 24px;
+line-height: calc(32/24);
+color: black;
+font-weight: 700;
+display: flex;
+justify-content: center;
+margin-bottom: 0;
+}
+.text-greeting-dark{
+  color: #bfc4ff;
+}
+  .block {
+    display: flex;
+    gap: 30px;
+}
+.displayNone{
+  display: none;
+}
 
-
+.enter{
+  display: flex;
+}
   .btn-night {
     background-color: #39218b;
   }
@@ -188,6 +304,9 @@
   .section-night {
    background-color:  #2e2f42;
   }
+  .section-white {
+    background-color:  #ffffff;
+   }
   .div-night{
     box-shadow: 1px 1px 2px black, 
     0 0 25px darkviolet, 0 0 5px darkblue;
