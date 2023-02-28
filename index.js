@@ -39,7 +39,7 @@ const arr = [
    
   const night = document.querySelector('.eng')
   const text = document.querySelector('.text')
-  const sectionNight = document.querySelector('.main')
+  const sectionNight = document.querySelector('body')
     
 
 
@@ -68,7 +68,6 @@ function btnRight() {
  if(count>=arr.length-1){
  count=-1
   }
-  return
     }     
 function btnLeft() { 
   console.log(count-=1)
