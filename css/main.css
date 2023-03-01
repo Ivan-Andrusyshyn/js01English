@@ -7,7 +7,7 @@ body {
   flex-direction: column;
   margin: 0 auto;
   width: 100%;
-  height: 100%;
+  height: 1000px;
   align-items: center;
   padding: 10px;
 }
@@ -315,7 +315,6 @@ body {
 
 .enter {
   display: flex;
-  background-color: #ffffff;
 }
 
 .btn-night {

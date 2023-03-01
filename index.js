@@ -45,7 +45,7 @@ const arr = [
 
   const night = document.querySelector('.eng')
   const text = document.querySelector('.text')
-  const sectionNight = document.querySelector('body')
+  const sectionNight = document.querySelector('.main')
     
 
 
@@ -65,8 +65,8 @@ const arr = [
  btnStart.addEventListener("click", btnLeft)
  screenFirst.addEventListener("click", screenOne ) 
  screenSecond.addEventListener("click", screenFirstremove)
- night.addEventListener("click",  nightTone)
-  
+ night.addEventListener("click", nightTone)
+
  function getInput(event){
  let elValue = event.currentTarget.value;
  textGreeting.textContent = `Welcome, ${elValue}`;
@@ -76,7 +76,7 @@ return elValue
 function getEnter(){
   main.classList.add('enter')
   inputDiv.classList.add('displayNone') 
-  sectionNight.style.backgroundColor = '#ffffff'
+  main.classList.add('main-white')
 }
 
 function btnRight() { 
@@ -105,11 +105,11 @@ function screenFirstremove(){
    screenSecond.classList.remove('space-start')
 }
 function nightTone(){ 
- 
+  main.classList.toggle('main-white')
  btnStart.classList.toggle('btn-night')
  btnStop.classList.toggle('btn-night')
  screenFirst.classList.toggle('div-night')
 text.classList.toggle('text-night')
-sectionNight.style.backgroundColor = '#2e2f42'
-textGreeting.classList.toggle('text-greeting-dark')   
+main.classList.toggle('dark')
+textGreeting.classList.toggle('text-greeting-dark') 
  }
