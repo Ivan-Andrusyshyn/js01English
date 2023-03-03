@@ -38,7 +38,8 @@ const arr = [
   const translite = document.querySelector('.translite')
   const main = document.querySelector('.main')
 
-  const input = document.querySelector('input[type="name"]')
+  const inputPassword = document.querySelector('input[placeholder="password"]')
+  const inputName = document.querySelector('input[type="name"]')
   const inputBtn = document.querySelector('.input_btn')
   const inputDiv = document.querySelector('.input_div')
   const textGreeting = document.querySelector('.text_greeting')
@@ -58,26 +59,60 @@ const arr = [
    }
    
   let count = -1;
+  inputName.addEventListener("input", getInput)
+  inputPassword.addEventListener("input", getPassword)
+  
 
-  input.addEventListener("input", getInput)
-  inputBtn.addEventListener("click",getEnter)
+ function getPassword(event){
+console.log(event.target.value)
+  const password = '1234'
+ if(  event.target.value === password){     
+  inputBtn.addEventListener("click", getEnter) 
+    }
+
+    function getEnter(){
+      main.classList.add('enter')
+      inputDiv.classList.add('displayNone') 
+      main.classList.add('main-white')
+}
+
+ }
+ function getInput(event){
+   
+  const ellCurr = event.currentTarget.value;
+  let elValue = ellCurr;
+ textGreeting.textContent = `Welcome, ${elValue}`;
+ console.log(event.currentTarget.value)  
+ } 
+
+
   btnStop.addEventListener( "click", btnRight)
  btnStart.addEventListener("click", btnLeft)
  screenFirst.addEventListener("click", screenOne ) 
  screenSecond.addEventListener("click", screenFirstremove)
  night.addEventListener("click", nightTone)
 
- function getInput(event){
- let elValue = event.currentTarget.value;
- textGreeting.textContent = `Welcome, ${elValue}`;
-return elValue
- }
 
-function getEnter(){
-  main.classList.add('enter')
-  inputDiv.classList.add('displayNone') 
-  main.classList.add('main-white')
-}
+
+
+
+ 
+//  function getInput(event){
+//   const ellCurr = event.currentTarget.value;
+//   if(event.target.value.length <=0){    
+//     return alert = 'Please, enter your name!';
+//   }
+//  let elValue = ellCurr;
+//  textGreeting.textContent = `Welcome, ${elValue}`;
+//  console.log(event.currentTarget.value)  
+// return elValue
+//  }
+
+// function getEnter(){
+//   main.classList.add('enter')
+//   inputDiv.classList.add('displayNone') 
+//   main.classList.add('main-white')
+// }
 
 function btnRight() { 
   console.log(count+=1)
