@@ -78,7 +78,7 @@ const arr = [
       console.log(inputName.value)
       mobHeader.classList.add('mob-header-flex')
         let elValue = inputName.value;
-       textGreeting.textContent = `Welcome, ${elValue}`;  
+       textGreeting.textContent = `Welcome, ${elValue} !`;  
     }else if( inputPassword.value !== password){
       return alert(' Incorrect password. Please try again !')
     } else if( inputName.value === ''){ 

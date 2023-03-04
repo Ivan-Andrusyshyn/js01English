@@ -32,8 +32,9 @@
      height: 40px;
      border: none;
      padding: 0;
-    top: 68px;
-     right:10px;
+    top: 5px;
+     right:20px;
+     fill: green;
   }
   .mob-header__btn_color{
     fill: white;
@@ -65,7 +66,7 @@
       overflow-y: auto;
       height: 700px;
       min-width: 75%;
-      padding-left: 40px;
+      padding-left: 20px;
       padding-top: 118px;
       background-color: #2E2F42;
       >svg {
