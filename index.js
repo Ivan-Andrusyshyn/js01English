@@ -71,9 +71,10 @@ const arr = [
     function getEnter(){
       const password = '1234'
 
-      if( inputPassword.value === password && inputName.value !== ''){      
+      if( inputPassword.value === password && inputName.value !== '' 
+      &&  inputName.value.length <= 8){      
         main.classList.add('enter')
-        inputDiv.classList.add('displayNone') 
+        inputDiv.classList.add('displayNone')  
         main.classList.add('main-white')
       console.log(inputName.value)
       mobHeader.classList.add('mob-header-flex')
@@ -83,6 +84,8 @@ const arr = [
       return alert(' Incorrect password. Please try again !')
     } else if( inputName.value === ''){ 
       return alert('Please, enter your name !')
+    }else if( inputName.value.length > 8){ 
+      return alert('Your name too long !')
     }
 
     } 
