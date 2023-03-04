@@ -38,6 +38,7 @@ const arr = [
   const translite = document.querySelector('.translite')
   const main = document.querySelector('.main')
 
+  
   const inputPassword = document.querySelector('input[placeholder="password"]')
   const inputName = document.querySelector('input[type="name"]')
   const inputBtn = document.querySelector('.input_btn')
