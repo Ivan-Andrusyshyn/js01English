@@ -41,8 +41,29 @@
       
     </div>   
     </section>
-    
+    <div class="mob-header">
+  
+      <button class="mob-header__btn"data-menu-open><svg class="header-svg" 
+        width="40px" height="40px">
+      <use href="./sprite.svg#icon-menu-svg"></use></svg></button>
+  </div>   
+    <div class="mob-menu  is-hidden"data-menu>
+      <div class="container-mob">
+          <button class="mob-menu__close-btn"data-menu-close><svg width="18px" height="18px">
+          <use href="./sprite.svg#icon-vector-x" ></use></svg></button>
+          <ul class="mob-meu__list menu-mobile__menu"> 
+              <li class="mob-item"><a href="#about" class="mob-item__link mob-link"change-stile>Change to night or back</a></li>
+              
+          </ul>
+          
+              <!-- <ul class="mob-soc_list">
+                  <li class="mob-soc__item item__before"><a href="https://www.instagram.com/" class="mob-soc__link" target="_blank">Instagram</a></li>
+                  <li class="mob-soc__item "><a href="https://www.youtube.com/" class="mob-soc__link" target="_blank">Youtube</a></li>
+              </ul> -->
+      </div>
+  </div>
 
     <script src="./index.js"></script>
+    <script src="./mob_menu.js"></script>
 </body>
 </html>

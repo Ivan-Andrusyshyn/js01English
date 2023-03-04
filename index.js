@@ -43,8 +43,11 @@ const arr = [
   const inputBtn = document.querySelector('.input_btn')
   const inputDiv = document.querySelector('.input_div')
   const textGreeting = document.querySelector('.text_greeting')
+  const mobHeader = document.querySelector('.mob-header')
+  const mobMenu = document.querySelector('.mob-menu')
 
-  const night = document.querySelector('.eng')
+
+  const night = document.querySelector('a[change-stile]')
   const text = document.querySelector('.text')
   const sectionNight = document.querySelector('.main')
     
@@ -59,31 +62,32 @@ const arr = [
    }
    
   let count = -1;
-  inputName.addEventListener("input", getInput)
-  inputPassword.addEventListener("input", getPassword)
-  
-
- function getPassword(event){
-console.log(event.target.value)
-  const password = '1234'
- if(  event.target.value === password){     
+  // inputName.addEventListener("input", getInput)
+  // inputPassword.addEventListener("input", getPassword)
+   
   inputBtn.addEventListener("click", getEnter) 
-    }
+
 
     function getEnter(){
-      main.classList.add('enter')
-      inputDiv.classList.add('displayNone') 
-      main.classList.add('main-white')
-}
+      const password = '1234'
 
- }
- function getInput(event){
-   
-  const ellCurr = event.currentTarget.value;
-  let elValue = ellCurr;
- textGreeting.textContent = `Welcome, ${elValue}`;
- console.log(event.currentTarget.value)  
- } 
+      if( inputPassword.value === password && inputName.value !== ''){      
+        main.classList.add('enter')
+        inputDiv.classList.add('displayNone') 
+        main.classList.add('main-white')
+      console.log(inputName.value)
+      mobHeader.classList.add('mob-header-flex')
+        let elValue = inputName.value;
+       textGreeting.textContent = `Welcome, ${elValue}`;  
+    }else if( inputPassword.value !== password){
+      return alert(' Incorrect password. Please try again !')
+    } else if( inputName.value === ''){ 
+      return alert('Please, enter your name !')
+    }
+
+    } 
+
+
 
 
   btnStop.addEventListener( "click", btnRight)
@@ -96,23 +100,7 @@ console.log(event.target.value)
 
 
 
- 
-//  function getInput(event){
-//   const ellCurr = event.currentTarget.value;
-//   if(event.target.value.length <=0){    
-//     return alert = 'Please, enter your name!';
-//   }
-//  let elValue = ellCurr;
-//  textGreeting.textContent = `Welcome, ${elValue}`;
-//  console.log(event.currentTarget.value)  
-// return elValue
-//  }
 
-// function getEnter(){
-//   main.classList.add('enter')
-//   inputDiv.classList.add('displayNone') 
-//   main.classList.add('main-white')
-// }
 
 function btnRight() { 
   console.log(count+=1)
@@ -139,12 +127,20 @@ translite.textContent = tran[count]
 function screenFirstremove(){
    screenSecond.classList.remove('space-start')
 }
-function nightTone(){ 
-  main.classList.toggle('main-white')
+function nightTone(){
+  const mobItemLinkText = document.querySelector('.mob-link')
+  const mobHeaderbtn = document.querySelector('.mob-header__btn')
+  const buttonManuClose = document.querySelector('button[data-menu-close]')
+  buttonManuClose.classList.toggle('menu__close-btn-color')
+  mobHeaderbtn.classList.toggle('mob-header__btn_color')
+  mobMenu.classList.toggle('mob-menu_color')
+  mobItemLinkText.classList.toggle('mob-link-color')
+
+  main.classList.toggle('main-white') 
  btnStart.classList.toggle('btn-night')
  btnStop.classList.toggle('btn-night')
  screenFirst.classList.toggle('div-night')
-text.classList.toggle('text-night')
+text.classList.toggle('text-night') 
 main.classList.toggle('dark')
 textGreeting.classList.toggle('text-greeting-dark') 
  }

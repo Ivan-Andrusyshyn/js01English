@@ -1,0 +1,197 @@
+//============================= mob header//
+.mob-header {
+    max-width: 100%;
+     display: none;
+     justify-content: space-between;
+     padding-top: 40px;
+     padding-left: 20px;
+     padding-right: 20px;
+     position: absolute;
+     top:0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     z-index: 2;
+     fill: var(--white);
+  @media screen and (min-width:480px) {
+     padding-left: 31px;
+     padding-right: 31px;
+  }
+  @media screen and (min-width:768px) {
+     display: none;
+  }
+  }
+ 
+  .mob-header-flex{
+    display: flex;
+  }
+  .mob-header__btn {
+   position: absolute;
+     background-color: transparent;
+     width: 40px;
+     height: 40px;
+     border: none;
+     padding: 0;
+    top: 68px;
+     right:10px;
+  }
+  .mob-header__btn_color{
+    fill: white;
+  }
+  .is-hidden {
+     opacity: 0;
+     pointer-events: none;
+     visibility: hidden;
+  }
+  
+    // =================================menu==================================
+  
+    .mob-menu {
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+      0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+      box-shadow: 4px, 0px,
+      rgba(0, 0, 0, 0.04);
+      transition: 300ms  linear;
+      border-radius: 4px;
+      border: 2px solid orange;
+      transition-property: opacity, visibility, transform;
+      margin: 0 auto;
+      z-index: 4;
+      // z-index: 33;
+      position: fixed;
+      top: 0;
+      right: 0;
+      overflow-y: auto;
+      height: 700px;
+      min-width: 75%;
+      padding-left: 40px;
+      padding-top: 118px;
+      background-color: #2E2F42;
+      >svg {
+          z-index: 4;
+      }
+      &.is-hidden {
+          transform: translateX(100%);
+      }
+@media screen and (min-width:480px) {
+      width: 337px;
+      height: 796px;
+  }
+  }
+  .mob-menu_color{
+    background-color: #ffffff;
+  }
+  .container-mob{
+      display: flex;
+      flex-direction: column;
+      gap: 64px;
+      height: 100%;
+  }
+  .mob-meu__list{
+      display: flex;
+      gap: 24px;
+      flex-direction: column;
+    }
+    .mob-item{
+        list-style: none;
+
+    }
+  .mob-link {
+      font-size: 18px;
+      line-height: calc(24.5 / 18);
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      color: #ffffff;
+      outline: none;
+      &:focus,
+      &:hover{
+          color: orange;
+      }
+  } 
+  .mob-link-color{
+    color: #2E2F42;
+  }
+  .current {
+    color: orange;
+  }
+  
+  .mob-menu__close-btn {
+      outline: none;
+      width: 30px;
+      height: 30px;
+      background-color: transparent;
+      position: absolute;
+      top: 52px;
+      right: 41px;
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      fill: #ffffff;
+      >svg {
+          position: absolute;
+      }
+  }
+  .menu__close-btn-color{
+    fill: black;
+  }
+  .menu__contact_wrapper {
+      display: flex;
+      gap: 24px;
+      flex-direction: column;
+  }
+  .mob-contact__btn {
+      outline: none;
+      transition: 300ms background-color linear;
+      text-transform: uppercase;
+      width: 194px;
+      min-height: 40px;
+      font-size: 12px;
+      line-height: calc(16.3 / 12);
+      border: 1px solid var(--orange);
+      transition: 250ms background-color linear;
+      border-radius: 25px;
+      text-transform: uppercase;
+      font-weight: 600;
+      background-color: transparent;
+      color: var(--black30);
+      &:hover,
+      &:focus {
+  background-color: orange;
+  color:#ffffff;
+  }
+  }
+  .mob-soc_list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      
+  }
+  .mob-soc__link {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: calc(19 / 14);
+      color: var(--black30);
+      letter-spacing: 0.2em;
+      &:focus,
+      &:hover {
+          color: orange;
+      }
+  }
+  .mob-soc__item{
+      display: flex;
+      gap: 40px;
+      align-items: center;
+  }
+  .mob-soc__item:not(:first-child){
+      margin-left: 100px;
+  }
+  .item__before::before {
+      content: "";
+      display: block;
+      height: 1px;
+      width: 60px;
+      background-color: var(--black30);
+  }
+  
