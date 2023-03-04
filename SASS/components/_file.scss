@@ -1,5 +1,6 @@
 body{
   background-color:#2E2F42;
+
 }
 .main{
   display: none;
@@ -8,7 +9,7 @@ body{
     width:100%;
     height:810px;
     align-items: center;
-    padding: 10px;
+    padding: 20px; 
     z-index: 3; 
     @media screen and (min-width:480px) {
       height: 1000px;
@@ -60,9 +61,6 @@ color: #E7E9FC;
   transition: all 0.3s ease;
   position: relative;
   display: inline-block;
-   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-   7px 7px 20px 0px rgba(0,0,0,.1),
-   4px 4px 5px 0px rgba(0,0,0,.1);
   outline: none;
   display: flex;
   justify-content: center;
@@ -112,6 +110,19 @@ color: #E7E9FC;
      display: flex;
     flex-direction: column;
   }
+
+  .text_greeting{
+    width:100%;
+    font-family: 'Raleway', sans-serif;
+  font-size: 24px;
+  line-height: calc(32/24);
+  color: black;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+
+  }
   .space-item{
     width: 330px;
     margin-top: 38px;
@@ -137,7 +148,7 @@ color: #E7E9FC;
 
     width: 330px;
     height: 350px;
-    top: 90px;
+    top: 128px; 
     position: absolute;
     justify-content: center;
       display: flex;
@@ -157,9 +168,10 @@ color: #E7E9FC;
       display: flex;
   }
   .text{
+    margin: 0 auto;
     font-family: 'Raleway', sans-serif;
-      font-size: 22px;
-      margin-bottom: 30px;
+      font-size: 24px;
+      // margin-bottom: 30px;
       margin-top: 0;
       color: black;
       font-weight: 700;
@@ -267,7 +279,6 @@ color: #E7E9FC;
     }
     .btn-15:hover {
       color: #fff;
-      border: 2px solid green;
       fill: pink;
     }
     .btn-15:hover:after {
@@ -282,17 +293,7 @@ color: #E7E9FC;
   
   
   /* ================================== */
-.text_greeting{
-  width:100%;
-  font-family: 'Raleway', sans-serif;
-font-size: 24px;
-line-height: calc(32/24);
-color: black;
-font-weight: 700;
-display: flex;
-justify-content: center;
-margin-bottom: 0;
-}
+
 .dark{
   background-color: #2e2f42;
 }
@@ -314,13 +315,17 @@ margin-bottom: 0;
 }
   .btn-night {
     background-color: #39218b;
+    fill: #ffffff;
   }
   .text-night{
     color: #bfc4ff;
   }
   .div-night{
     box-shadow: 1px 1px 2px black, 
-    0 0 25px darkviolet, 0 0 5px darkblue;
-    background-color: #4B0082;;
+    0 0 10px darkviolet, 0 0 5px darkblue;
+    background-color: green;
+    
+    // background-color: #4B0082; 
+
   }
  

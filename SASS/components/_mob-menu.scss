@@ -30,13 +30,14 @@ ul{
   }
   .mob-header__btn {
    position: absolute;
+   top:70px;  
+   right:20px; 
      background-color: transparent;
      width: 40px;
      height: 40px;
      border: none;
      padding: 0;
-    top: 52px;
-     right:20px;
+   
      fill: green;
   }
   .mob-header__btn_color{
