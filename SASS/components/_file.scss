@@ -9,6 +9,7 @@ body{
     height:810px;
     align-items: center;
     padding: 10px;
+    z-index: 3; 
     @media screen and (min-width:480px) {
       height: 1000px;
 
@@ -124,12 +125,16 @@ color: #E7E9FC;
       margin-bottom: 30px;
       background-color: green;
       border-radius: 10px;
+    z-index: 3; 
+
       @media screen and (min-width:1200) {
         width: 400px;
         height: 400px;
         }
   }
   .space-item2{
+    z-index: 3; 
+
     width: 330px;
     height: 350px;
     top: 90px;
@@ -176,6 +181,8 @@ color: #E7E9FC;
 
  
   .btn-stop{
+    z-index: 3; 
+
       width: 130px;
       height: 40px;
       color: #fff;
@@ -199,6 +206,8 @@ color: #E7E9FC;
   }
   
   .btn-start {
+    z-index: 3; 
+
       width: 130px;
       height: 40px;
       color: #fff;

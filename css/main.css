@@ -10,6 +10,7 @@ body {
   height: 810px;
   align-items: center;
   padding: 10px;
+  z-index: 3;
 }
 @media screen and (min-width: 480px) {
   .main {
@@ -132,6 +133,7 @@ body {
   margin-bottom: 30px;
   background-color: green;
   border-radius: 10px;
+  z-index: 3;
 }
 @media screen and (min-width: 1200) {
   .space-item {
@@ -141,6 +143,7 @@ body {
 }
 
 .space-item2 {
+  z-index: 3;
   width: 330px;
   height: 350px;
   top: 90px;
@@ -192,6 +195,7 @@ body {
 
 /* =============btn======================= */
 .btn-stop {
+  z-index: 3;
   width: 130px;
   height: 40px;
   color: #fff;
@@ -213,6 +217,7 @@ body {
 }
 
 .btn-start {
+  z-index: 3;
   width: 130px;
   height: 40px;
   color: #fff;
@@ -351,7 +356,7 @@ ul {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 2;
+  z-index: 0;
   fill: var(--white);
 }
 @media screen and (min-width: 480px) {
