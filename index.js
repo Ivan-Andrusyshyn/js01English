@@ -30,77 +30,78 @@ const arr = [
 {word:'five', translite:'5'},{word:'six', translite:'6'},{word:'made', translite:'зроблено'},
 {word:'sun', translite:'сонце'},{word:'moon', translite:'місяць'},{word:'night', translite:'ніч'}
 ]
-  const englishWord = document.querySelector('.english-word')
-  const btnStart = document.querySelector('.btn-start')
-  const btnStop = document.querySelector('.btn-stop')
-  const screenFirst = document.querySelector('.space-item')
-  const screenSecond = document.querySelector('.space-item2')
-  const translite = document.querySelector('.translite')
-  const main = document.querySelector('.main')
-
-  
-  const inputPassword = document.querySelector('input[placeholder="password"]')
-  const inputName = document.querySelector('input[type="name"]')
-  const inputBtn = document.querySelector('.input_btn')
-  const inputDiv = document.querySelector('.input_div')
-  const textGreeting = document.querySelector('.text_greeting')
-  const mobHeader = document.querySelector('.mob-header')
-  const mobMenu = document.querySelector('.mob-menu')
+const englishWord = document.querySelector('.english-word')
+const btnStart = document.querySelector('.btn-start')
+const btnStop = document.querySelector('.btn-stop')
+const screenFirst = document.querySelector('.space-item')
+const screenSecond = document.querySelector('.space-item2')
+const translite = document.querySelector('.translite')
+const main = document.querySelector('.main')
 
 
-  const night = document.querySelector('a[change-stile]')
-  const text = document.querySelector('.text')
-  const sectionNight = document.querySelector('.main')
+const inputPassword = document.querySelector('input[placeholder="password"]')
+const inputName = document.querySelector('input[type="name"]')
+const inputBtn = document.querySelector('.input_btn')
+const inputDiv = document.querySelector('.input_div')
+const textGreeting = document.querySelector('.text_greeting')
+
+const nightInputCheck = document.querySelector('.checkbox')
+const text = document.querySelectorAll('p')
+// const inputParagraf = document.querySelector('.input_p')
+const sectionNight = document.querySelector('.main')
+
+const mobHeader = document.querySelector('.mob-header')
+const mobMenu = document.querySelector('.mob-menu')
+
+ 
+ 
     
 
-
+ 
   const word = [];
- const  tran = [];
-   for (let w of arr) {
-     word.push(w.word);
-    tran.push(w.translite);
-
-   }
-   
-  let count = -1;
-  // inputName.addEventListener("input", getInput)
-  // inputPassword.addEventListener("input", getPassword)
-   
-  inputBtn.addEventListener("click", getEnter) 
-
-
-    function getEnter(){
-      const password = '1234'
-
-      if( inputPassword.value === password && inputName.value !== '' 
-      &&  inputName.value.length <= 8){      
-        main.classList.add('enter')
-        inputDiv.classList.add('displayNone')  
-        main.classList.add('main-white')
-      console.log(inputName.value)
-      mobHeader.classList.add('mob-header-flex')
-        let elValue = inputName.value;
-       textGreeting.textContent = `Welcome, ${elValue} !`;  
-    }else if( inputPassword.value !== password){
-      return alert(' Incorrect password. Please try again !')
-    } else if( inputName.value === ''){ 
-      return alert('Please, enter your name !')
-    }else if( inputName.value.length > 8){ 
-      return alert('Your name too long !')
+  const  tran = []; 
+    for (let w of arr) {
+      word.push(w.word);
+     tran.push(w.translite);
+ 
     }
+    
+   let count = -1;
+   
+   inputBtn.addEventListener("click", getEnter) 
+     function getEnter(){
+       const password = '1234' 
+ 
+       if( inputPassword.value === password && inputName.value !== '' 
+       &&  inputName.value.length <= 8){      
+         main.classList.add('enter')
+         inputDiv.classList.add('displayNone')  
+         main.classList.add('main-white')
+       console.log(inputName.value)
+       mobHeader.classList.add('mob-header-flex')
+         let elValue = inputName.value;
+         console.log(elValue)
+        textGreeting.textContent = `Welcome, ${elValue} !`;   
+     }else if( inputPassword.value !== password){
+       return alert(' Incorrect password. Please try again !')
+     } else if( inputName.value === ''){ 
+       return alert('Please, enter your name !')
+     }else if( inputName.value.length > 8){ 
+       return alert('Your name too long !')
+     }
+ 
+     } 
 
-    } 
-
-
+ 
 
 
   btnStop.addEventListener( "click", btnRight)
  btnStart.addEventListener("click", btnLeft)
  screenFirst.addEventListener("click", screenOne ) 
  screenSecond.addEventListener("click", screenFirstremove)
- night.addEventListener("click", nightTone)
+ nightInputCheck.addEventListener("click", onNightStyle)
 
-
+ 
 
 
 
@@ -131,20 +132,21 @@ translite.textContent = tran[count]
 function screenFirstremove(){
    screenSecond.classList.remove('space-start')
 }
-function nightTone(){
-  const mobItemLinkText = document.querySelector('.mob-link')
+
+ function onNightStyle(){
+  // const mobItemLinkText = document.querySelector('.mob-link')
   const mobHeaderbtn = document.querySelector('.mob-header__btn')
   const buttonManuClose = document.querySelector('button[data-menu-close]')
   buttonManuClose.classList.toggle('menu__close-btn-color')
   mobHeaderbtn.classList.toggle('mob-header__btn_color')
   mobMenu.classList.toggle('mob-menu_color')
-  mobItemLinkText.classList.toggle('mob-link-color')
+  // mobItemLinkText.classList.toggle('mob-link-color')
 
   main.classList.toggle('main-white') 
  btnStart.classList.toggle('btn-night')
  btnStop.classList.toggle('btn-night')
  screenFirst.classList.toggle('div-night')
-text.classList.toggle('text-night') 
+text.forEach(el=>el.classList.toggle('text-night')) 
 main.classList.toggle('dark')
-textGreeting.classList.toggle('text-greeting-dark') 
+
  }
