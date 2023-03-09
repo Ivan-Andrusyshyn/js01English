@@ -1,6 +1,6 @@
 
 .checkbox_div{
-    width:370px;
+    width:100%;
     display: flex;
     justify-content: right;
     align-items: center;
@@ -10,7 +10,9 @@
     gap:10px;
     font-size: 14px;
     font-weight: 700;
-
+@media screen and (min-width:480px) {
+  width:370px;
+}
 }
  
 .input_p{

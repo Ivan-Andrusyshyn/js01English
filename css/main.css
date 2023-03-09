@@ -1,5 +1,5 @@
 .checkbox_div {
-  width: 370px;
+  width: 100%;
   display: flex;
   justify-content: right;
   align-items: center;
@@ -9,6 +9,11 @@
   gap: 10px;
   font-size: 14px;
   font-weight: 700;
+}
+@media screen and (min-width: 480px) {
+  .checkbox_div {
+    width: 370px;
+  }
 }
 
 .input_p {
@@ -452,7 +457,7 @@ ul {
 .mob-header__btn {
   position: absolute;
   top: 70px;
-  right: 42%;
+  right: calc(45% - 50px);
   background-color: transparent;
   width: 40px;
   height: 40px;
