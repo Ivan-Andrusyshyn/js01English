@@ -23,7 +23,7 @@ ul{
   @media screen and (min-width:768px) {
      display: none;
   }
-  }
+  } 
  
   .mob-header-flex{
     display: flex;
@@ -31,13 +31,13 @@ ul{
   .mob-header__btn {
    position: absolute;
    top:70px;  
-   right:20px; 
+   right:calc(42%); 
      background-color: transparent;
      width: 40px;
      height: 40px;
      border: none;
      padding: 0;
-   
+   z-index: 3;
      fill: green;
   }
   .mob-header__btn_color{
