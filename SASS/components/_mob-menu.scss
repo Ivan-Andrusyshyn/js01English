@@ -39,6 +39,9 @@ ul{
      padding: 0;
    z-index: 3;
      fill: green;
+     @media screen and (min-width:480px) {
+      display: none;
+   }
   }
   .mob-header__btn_color{
     fill: white;

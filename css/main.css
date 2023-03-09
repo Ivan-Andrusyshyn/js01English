@@ -466,6 +466,11 @@ ul {
   z-index: 3;
   fill: green;
 }
+@media screen and (min-width: 480px) {
+  .mob-header__btn {
+    display: none;
+  }
+}
 
 .mob-header__btn_color {
   fill: white;
