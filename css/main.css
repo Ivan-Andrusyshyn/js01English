@@ -457,7 +457,7 @@ ul {
 .mob-header__btn {
   position: absolute;
   top: 70px;
-  right: calc(45% - 50px);
+  right: 20px;
   background-color: transparent;
   width: 40px;
   height: 40px;
